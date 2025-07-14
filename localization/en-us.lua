@@ -5,12 +5,21 @@ return {
         Edition={},
         Enhanced={},
         Joker={
-            j_rev_megapolis = {
+            j_mer_megapolis = {
                 name = "Megapolis",
                 text = {
                     "After each scoring hand",
                     "divide the total score by {C:attention}2",
                     "{C:gold}+$#1#{} at the end of round"
+                }
+            },
+            j_mer_druid = {
+                name = "Druid",
+                text = {
+                "Applies {C:green}Rooted{} to",
+                "all scoring cards and {X:mult,C:white}+X1{}",
+                "per Rooted Card in deck",
+                "Currently: {X:mult,C:white}X#1#{}"
                 }
             },
         },

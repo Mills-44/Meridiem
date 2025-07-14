@@ -14,10 +14,11 @@ SMODS.Joker {
     },
     config = {
         extra = {
+            xmult = 1
         },
     },
-    rarity = 1,
-    cost = 5,
+    rarity = 3,
+    cost = 12,
     unlocked = true,
     discovered = false, 
     blueprint_compat = true,
@@ -26,12 +27,45 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-    
+                card.ability.extra.xmult
             }
         }  
     end,
     calculate = function(self, card, context)
-
+        if context.before then
+            for _,c in ipairs(context.scoring_hand) do
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'after',
+                    delay = 0.15,
+                    func = function()
+                    c:flip()
+                    c:juice_up(.3,.5)
+                    return true
+                       end
+                }))
+                if not c:set_eternal(false) then
+                    c:set_eternal(true) 
+                end
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'after',
+                    delay = .3,
+                    func = function()
+                    c:flip()
+                    return true
+                    end}))
+            end
+            local rooted_cards = 0
+            for _, c in ipairs(G.playing_cards or {}) do
+                if c:set_eternal(true) then
+                    rooted_cards = rooted_cards + 1
+                end
+            end
+        end
+        if context.joker_main then
+            return {
+                xmult = card.ability.extra.xmult
+            }
+        end
     end
     }
 

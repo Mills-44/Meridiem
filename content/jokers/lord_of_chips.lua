@@ -1,22 +1,20 @@
 SMODS.Atlas {
-    key  = 'megapolis',
-    path = 'megapolis.png',
+    key  = 'lord_of_chips',
+    path = 'lord_of_chips.png',
     px   = 71, 
     py   = 95, 
   }
 
 SMODS.Joker {
-    key = 'megapolis',
-    atlas = 'megapolis',
+    key = 'lord_of_chips',
+    atlas = 'lord_of_chips',
     pos = {
         x = 0,
         y = 0
     },
     config = {
         extra = {
-            money_bonus = 10,
-            xmult = .5,
-            xchips = .5
+            mult = 1,    
         },
     },
     rarity = 2,
@@ -34,10 +32,11 @@ SMODS.Joker {
         }  
     end,
     calculate = function(self, card, context)
+        local chip_trip = math.pow(tonumber(format_ui_value(G.GAME.chips)), 3)
         if context.joker_main then         
             return {
-                xmult = .5,
-                xchips = .5
+                mult = 1,
+                chips = chip_trip
             }
         end
         if context.end_of_round and context.cardarea == G.jokers then

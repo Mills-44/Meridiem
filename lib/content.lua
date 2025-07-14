@@ -1,6 +1,11 @@
-REVERIE.config = SMODS.current_mod.config
+MERIDIEM.config = SMODS.current_mod.config
 
-REVERIE.JOKERS = {
-    "druid",
-    "megapolis"
+MERIDIEM.JOKERS = {
+    --"druid",
+    "megapolis",
+    "lord_of_chips"
+}
+
+MERIDIEM.STICKERS = {
+   --"rooted"
 }
