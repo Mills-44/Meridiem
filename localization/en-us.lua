@@ -17,9 +17,17 @@ return {
                 name = "Druid",
                 text = {
                 "Applies {C:green}Rooted{} to",
-                "all scoring cards and {X:mult,C:white}+X1{}",
+                "all scoring cards and {X:mult,C:white}+X1{} Mult",
                 "per Rooted Card in deck",
-                "Currently: {X:mult,C:white}X#1#{}"
+                "Currently: {X:mult,C:white}X#1#{} Mult"
+                }
+            },
+            j_mer_lord_of_chips = {
+                name = "Lord Of Chips",
+                text = {
+                "{X:chips,C:white}+X1{} Chips per {C:attention}K{}",
+                "scored and divides Mult by {C:attention}2{}",
+                "Currently: {X:chips,C:white}X#1#{} Chips"
                 }
             },
         },

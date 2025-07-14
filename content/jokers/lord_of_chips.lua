@@ -14,7 +14,7 @@ SMODS.Joker {
     },
     config = {
         extra = {
-            mult = 1,    
+            xchips = 1
         },
     },
     rarity = 2,
@@ -27,23 +27,21 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.money_bonus
+                card.ability.extra.xchips
             }
         }  
     end,
     calculate = function(self, card, context)
-        local chip_trip = math.pow(tonumber(format_ui_value(G.GAME.chips)), 3)
+        local xchips = 1
+        if context.individual and context.cardarea == G.play then
+            if context.other_card:get_id() == 13 then
+                card.ability.extra.xchips = card.ability.extra.xchips + 1
+            end
+        end
         if context.joker_main then         
             return {
-                mult = 1,
-                chips = chip_trip
-            }
-        end
-        if context.end_of_round and context.cardarea == G.jokers then
-            ease_dollars(12)
-            return {
-                message = "+$10",
-                colour = G.C.GOLD
+                xmult = .5,
+                xchips = card.ability.extra.xchips
             }
         end
     end
