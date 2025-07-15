@@ -12,3 +12,9 @@ SMODS.load_file("lib/util.lua")() -- Util functionality
 
 -- Load Jokers
 MERIDIEM.file_loader(MERIDIEM.JOKERS, "content/jokers")
+
+-- Load Editions
+MERIDIEM.file_loader(MERIDIEM.EDITIONS, "content/editions")
+
+-- Load Stickers
+MERIDIEM.file_loader(MERIDIEM.STICKERS, "content/stickers")

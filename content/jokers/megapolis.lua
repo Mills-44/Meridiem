@@ -41,7 +41,7 @@ SMODS.Joker {
             }
         end
         if context.end_of_round and context.cardarea == G.jokers then
-            ease_dollars(12)
+            ease_dollars(card.ability.extra.money_bonus)
             return {
                 message = "+$10",
                 colour = G.C.GOLD

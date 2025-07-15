@@ -30,6 +30,16 @@ return {
                 "Currently: {X:chips,C:white}X#1#{} Chips"
                 }
             },
+            j_mer_funky_joker = {
+                name = "Funky Joker",
+                text = {
+                "This {C:attention}Joker{} gains",
+                "{C:mult}+#1#{} Mult & {C:gold}+$#2#{}", 
+                "each {C:attention}Blind{} skipped",
+                "{C:inactive}($ applied end of round){}",
+                "{C:inactive} Currently:{} {C:mult}+#3#{}{C:inactive} & {C:gold}$#4#"
+                }
+            },
         },
         Other={},
         Planet={},
