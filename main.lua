@@ -10,6 +10,9 @@ SMODS.load_file("lib/content.lua")() -- Definitions/Content Add
 SMODS.load_file("lib/pools.lua")() -- Pools created in code for mod
 SMODS.load_file("lib/util.lua")() -- Util functionality
 
+-- Load Gradients
+MERIDIEM.file_loader(MERIDIEM.GRADIENTS, "content/gradients")
+
 -- Load Jokers
 MERIDIEM.file_loader(MERIDIEM.JOKERS, "content/jokers")
 

@@ -17,7 +17,7 @@ return {
                 text = {
                     "This {C:attention}Joker{} gains",
                     "{X:mult,C:white}X#1#{} Mult for every",
-                    "scored Darkness Cards",
+                    "scored {C:mer_black_edition}Darkness{} Cards",
                     "Card resets back to normal if so",
                     "Currently: {X:mult,C:white}X#2#{} Mult"
                 }

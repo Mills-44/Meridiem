@@ -9,6 +9,10 @@ SMODS.Edition {
   config = {
     amount = 1
   },
+  replace_base_card = true,
+  no_suit = true,
+  no_rank = true,
+  always_scores = true,
   discovered = false,
   weight = 3,     
   in_shop = true,

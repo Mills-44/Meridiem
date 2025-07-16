@@ -1,10 +1,11 @@
 SMODS.Gradient {
   key = 'black_edition',
   colours = {
-    HEX("4983e2"), --Royal Blue
-    HEX("0807b9"), -- Dark Blue
-    HEX("1bb6e6") -- Light Blue
+    HEX("debd65"), 
+    HEX("cb9e26"),
+    HEX("6f5510"),
+    HEX("060400")
   },
-  cycle = 1.5,
+  cycle = 6,
   interpolation = 'trig'
 }

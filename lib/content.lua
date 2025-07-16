@@ -17,3 +17,7 @@ MERIDIEM.STICKERS = {
 MERIDIEM.EDITIONS = {
    "darkness"
 }
+
+MERIDIEM.GRADIENTS = {
+   "black_edition"
+}

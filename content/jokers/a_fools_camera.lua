@@ -14,7 +14,7 @@ SMODS.Joker {
     },
     config = {
         extra = {
-        xmult = 0,
+        xmult = 1,
         xmult_gain = .1
         },
     },
@@ -34,13 +34,11 @@ SMODS.Joker {
         }  
     end,
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play then
-            for k, v in ipairs(context.scoring_hand) do
-                 if v.config.center ~= "mer_e_darkness" then 
-                    card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
-                    v:set_edition(nil, nil, true)
+        if context.before then
+                 if context.other_card.config.center ~= "mer_e_darkness" then 
+                    context.other_card:set_edition(nil, nil, true)
+                    card.ability.extra.xmult = (card.ability.extra.xmult + card.ability.extra.xmult_gain) 
                 end
-            end
         end
         if context.joker_main then 
             return {
