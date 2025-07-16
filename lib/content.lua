@@ -1,7 +1,9 @@
 MERIDIEM.config = SMODS.current_mod.config
 
 MERIDIEM.JOKERS = {
+   "a_fools_camera",
    "backstage",
+   "below_the_rainbow",
    --"druid",
    "funky_joker",
    "megapolis",
@@ -13,5 +15,5 @@ MERIDIEM.STICKERS = {
 }
 
 MERIDIEM.EDITIONS = {
-   --"darkness"
+   "darkness"
 }

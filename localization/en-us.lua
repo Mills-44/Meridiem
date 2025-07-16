@@ -2,16 +2,41 @@ return {
     descriptions = {
         Back={},
         Blind={},
-        Edition={},
+        Edition={
+            e_mer_darkness = {
+                name = "Darkness",
+                text = {
+                    ""
+                }
+      }
+    },
         Enhanced={},
         Joker={
+            j_mer_a_fools_camera = {
+                name = "A Fool's Camera",
+                text = {
+                    "This {C:attention}Joker{} gains",
+                    "{X:mult,C:white}X#1#{} Mult for every",
+                    "scored Darkness Cards",
+                    "Card resets back to normal if so",
+                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                }
+            },
             j_mer_backstage = {
                 name = "Backstage",
                 text = {
                 "This {C:attention}Joker{} gains",
-                "{C:mult}+#1#{} Mult for every",
-                "consecutive hand of {C:attention}Face{} cards",
+                "{C:mult}+#1#{} Mult for every consecutive",
+                "hand of only {C:attention}Face{} cards",
                 "Currently: {C:mult}+#1#{} Mult"
+                }
+            },
+            j_mer_below_the_rainbow = {
+                name = "Below The Rainbow",
+                text = {
+                    "Scoring cards with {C:attention}Enhancements{}",
+                    "are erased and creates a",
+                    "{C:dark_edition}Negative{} copy of a owned consumable"
                 }
             },
             j_mer_druid = {
@@ -66,7 +91,9 @@ return {
         collabs={},
         dictionary={},
         high_scores={},
-        labels={},
+        labels={
+            mer_darkness = "Darkness"
+        },
         poker_hand_descriptions={},
         poker_hands={},
         quips={},
