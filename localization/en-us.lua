@@ -5,12 +5,13 @@ return {
         Edition={},
         Enhanced={},
         Joker={
-            j_mer_megapolis = {
-                name = "Megapolis",
+            j_mer_backstage = {
+                name = "Backstage",
                 text = {
-                    "After each scoring hand",
-                    "divide the total score by {C:attention}2",
-                    "{C:gold}+$#1#{} at the end of round"
+                "This {C:attention}Joker{} gains",
+                "{C:mult}+#1#{} Mult for every",
+                "consecutive hand of {C:attention}Face{} cards",
+                "Currently: {C:mult}+#1#{} Mult"
                 }
             },
             j_mer_druid = {
@@ -22,14 +23,6 @@ return {
                 "Currently: {X:mult,C:white}X#1#{} Mult"
                 }
             },
-            j_mer_lord_of_chips = {
-                name = "Lord Of Chips",
-                text = {
-                "{X:chips,C:white}+X1{} Chips per {C:attention}K{}",
-                "scored and divides Mult by {C:attention}2{}",
-                "Currently: {X:chips,C:white}X#1#{} Chips"
-                }
-            },
             j_mer_funky_joker = {
                 name = "Funky Joker",
                 text = {
@@ -38,6 +31,22 @@ return {
                 "each {C:attention}Blind{} skipped",
                 "{C:inactive}($ applied end of round){}",
                 "{C:inactive} Currently:{} {C:mult}+#3#{}{C:inactive} & {C:gold}$#4#"
+                }
+            },
+            j_mer_lord_of_chips = {
+                name = "Lord Of Chips",
+                text = {
+                "{X:chips,C:white}+X1{} Chips per {C:attention}K{}",
+                "scored and divides Mult by {C:attention}2{}",
+                "Currently: {X:chips,C:white}X#1#{} Chips"
+                }
+            },
+             j_mer_megapolis = {
+                name = "Megapolis",
+                text = {
+                    "After each scoring hand",
+                    "divide the total score by {C:attention}2",
+                    "{C:gold}+$#1#{} at the end of round"
                 }
             },
         },

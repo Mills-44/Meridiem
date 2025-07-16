@@ -1,10 +1,11 @@
 MERIDIEM.config = SMODS.current_mod.config
 
 MERIDIEM.JOKERS = {
-    --"druid",
-    "funky_joker",
-    "megapolis",
-    "lord_of_chips"
+   "backstage",
+   --"druid",
+   "funky_joker",
+   "megapolis",
+   "lord_of_chips",
 }
 
 MERIDIEM.STICKERS = {
