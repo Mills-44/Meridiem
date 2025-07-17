@@ -73,6 +73,31 @@ return {
                     "divide the total score by {C:attention}2",
                     "{C:gold}+$#1#{} at the end of round"
                 }
+            },j_mer_moonlight = {
+                name = "Moonlight",
+                text = {
+                    "This {C:attention}Joker{} gives {X:mult,C:white}X#1#{}",
+                    "for any {C:mer_black_edition}Darkness{} cards",
+                    "held in hand,",
+                    "All scored cards turn",
+                    "to {C:mer_black_edition}Darkness{}"
+                }
+            },
+            j_mer_ouroboros = {
+                name = "Ouroboros",
+                text = {
+                    "Retriggers Scale when they happen",
+                    "Resets each hand played"
+                }
+            },
+            j_mer_wire_man = {
+                name = "Wire Man",
+                text = {
+                    "Destroy {C:attention}3{} cards",
+                    "create a random {C:attention}Steel{} card",
+                    "At the end of each round",
+                    "Destroy the card on the far left"
+                }
             },
         },
         Other={},

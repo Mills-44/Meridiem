@@ -7,7 +7,10 @@ MERIDIEM.JOKERS = {
    --"druid",
    "funky_joker",
    "megapolis",
+  -- "moonlight",
    "lord_of_chips",
+   "ouroboros",
+   --"wire_man"
 }
 
 MERIDIEM.STICKERS = {

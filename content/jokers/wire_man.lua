@@ -1,13 +1,13 @@
 SMODS.Atlas {
-    key  = 'below_the_rainbow',
-    path = 'below_the_rainbow.png',
+    key  = 'wire_man',
+    path = 'wire_man.png',
     px   = 71, 
     py   = 95, 
   }
 
 SMODS.Joker {
-    key = 'below_the_rainbow',
-    atlas = 'below_the_rainbow',
+    key = 'wire_man',
+    atlas = 'wire_man',
     pos = {
         x = 0,
         y = 0
