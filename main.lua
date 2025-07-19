@@ -10,6 +10,9 @@ SMODS.load_file("lib/content.lua")() -- Definitions/Content Add
 SMODS.load_file("lib/pools.lua")() -- Pools created in code for mod
 SMODS.load_file("lib/util.lua")() -- Util functionality
 
+-- Lovely Patches
+SMODS.load_file("lovely/patches.toml") -- Patch For Lovely
+
 -- Load Gradients
 MERIDIEM.file_loader(MERIDIEM.GRADIENTS, "content/gradients")
 

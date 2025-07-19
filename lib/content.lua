@@ -4,17 +4,17 @@ MERIDIEM.JOKERS = {
    "a_fools_camera",
    "backstage",
    "below_the_rainbow",
-   --"druid",
+   "druid",
    "funky_joker",
    "megapolis",
-  -- "moonlight",
+   "moonlight",
    "lord_of_chips",
    "ouroboros",
-   --"wire_man"
+   "wire_man"
 }
 
 MERIDIEM.STICKERS = {
-   --"rooted"
+   "rooted"
 }
 
 MERIDIEM.EDITIONS = {

@@ -36,17 +36,21 @@ SMODS.Joker {
             card.ability.extra.destroyed_cards = card.ability.extra.destroyed_cards - 1
             if card.ability.extra.destroyed_cards == 0 then
                 card.ability.extra.destroyed_cards = 3
-                local newcard = create_card({
-                    set = 'Enhanced',
-                    area = G.hand,
-                    enhancement = "m_steel"
-                })
-                newcard:add_to_deck()
-                G.hand:emplace(newcard)
-                newcard:juice_up(.3,.5)
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'after',
+                    delay = .2,
+                    func = function()
+                        local newcard = create_card("Enhanced", G.hand, nil, nil, nil, nil, nil, nil)
+                        newcard:set_ability("m_steel")
+                        newcard:add_to_deck()
+                        G.hand:emplace(newcard)
+                        newcard:juice_up(.3,.5)
+                    return true
+                    end
+                }))
             end
         end
-        if context.end_of_round and context.destroy_card then
+        if context.end_of_round then
             SMODS.destroy_cards(G.hand[1])
         end
     end

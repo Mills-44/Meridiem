@@ -12,4 +12,14 @@ SMODS.Sticker {
         x = 0,
         y = 0
     },
+    loc_vars = function(self, info_queue, card)
+        return { 
+            vars = { 
+                 
+            } 
+        }
+    end,
+    calculate = function(self, card, context)
+        
+    end
 }

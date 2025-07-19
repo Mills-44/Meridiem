@@ -37,14 +37,12 @@ SMODS.Joker {
                 k:set_edition("e_mer_darkness", nil, true)
             end
         end
-        if context.cardarea == G.hand and context.main_scoring then
-            local checker = false
-           for i, k in ipairs(context.scoring_hand) do
-                
-           end
-                return {
-                    xmult = 2
-                }
-            end
+       if context.individual and context.cardarea == G.hand then
+        if context.other_card.edition and context.other_card.edition.mer_darkness == true then
+            return {
+                xmult = 2
+            }
+        end 
+       end
     end
   }
