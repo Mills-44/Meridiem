@@ -14,7 +14,6 @@ SMODS.Joker {
     },
     config = {
         extra = {
-            destroyed_cards = 3
         },
     },
     rarity = 2,
@@ -27,27 +26,120 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.destroyed_cards  
             }
         }  
     end,
     calculate = function(self, card, context)
-        if context.destroy_card then
-            card.ability.extra.destroyed_cards = card.ability.extra.destroyed_cards - 1
-            if card.ability.extra.destroyed_cards == 0 then
-                card.ability.extra.destroyed_cards = 3
-                local newcard = create_card({
-                    set = 'Enhanced',
-                    area = G.hand,
-                    enhancement = "m_steel"
-                })
-                newcard:add_to_deck()
-                G.hand:emplace(newcard)
-                newcard:juice_up(.3,.5)
+        local count = 0
+        if context.before then
+            for _, c in ipairs(context.scoring_hand) do
+                 if c.config.center ~= "m_bonus" then 
+                    c:set_ability(nil, nil, true)
+                    count = count + 1
+                end
             end
         end
-        if context.end_of_round and context.destroy_card then
-            SMODS.destroy_cards(G.hand[1])
+        if context.joker_main then 
+            if count == 1 then
+                if G.consumeables.cards[1] then
+                    G.E_MANAGER:add_event(Event({
+                        func = function() 
+                            local card = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            card:set_edition({negative = true}, true)
+                            card:add_to_deck()
+                            G.consumeables:emplace(card) 
+                        return true
+                    end}))
+                end
+            end
+            if count == 2 then
+                if G.consumeables.cards[1] then
+                    G.E_MANAGER:add_event(Event({
+                        func = function() 
+                            local card = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            local card2 = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            card:set_edition({negative = true}, true)
+                            card2:set_edition({negative = true}, true)
+                            card:add_to_deck()
+                            card2:add_to_deck()
+                            G.consumeables:emplace(card) 
+                            G.consumeables:emplace(card2) 
+                        return true
+                    end}))
+                end
+            end
+            if count == 3 then
+                if G.consumeables.cards[1] then
+                    G.E_MANAGER:add_event(Event({
+                        func = function() 
+                            local card = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            local card2 = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            local card3 = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            card:set_edition({negative = true}, true)
+                            card2:set_edition({negative = true}, true)
+                            card3:set_edition({negative = true}, true)
+                            card:add_to_deck()
+                            card2:add_to_deck()
+                            card3:add_to_deck()
+                            G.consumeables:emplace(card) 
+                            G.consumeables:emplace(card2)
+                            G.consumeables:emplace(card3)
+                        return true
+                    end}))
+                end
+            end
+            if count == 4 then
+                if G.consumeables.cards[1] then
+                    G.E_MANAGER:add_event(Event({
+                        func = function() 
+                            local card = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            local card2 = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            local card3 = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            local card4 = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            card:set_edition({negative = true}, true)
+                            card2:set_edition({negative = true}, true)
+                            card3:set_edition({negative = true}, true)
+                            card4:set_edition({negative = true}, true)
+                            card:add_to_deck()
+                            card2:add_to_deck()
+                            card3:add_to_deck()
+                            card4:add_to_deck()
+                            G.consumeables:emplace(card) 
+                            G.consumeables:emplace(card2)
+                            G.consumeables:emplace(card3)
+                            G.consumeables:emplace(card4)
+                        return true
+                    end}))
+                end
+            end
+            if count == 5 then
+                if G.consumeables.cards[1] then
+                    G.E_MANAGER:add_event(Event({
+                        func = function() 
+                            local card = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            local card2 = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            local card3 = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            local card4 = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            local card5 = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('below_the_rainbow')), nil)
+                            card:set_edition({negative = true}, true)
+                            card2:set_edition({negative = true}, true)
+                            card3:set_edition({negative = true}, true)
+                            card4:set_edition({negative = true}, true)
+                            card5:set_edition({negative = true}, true)
+                            card:add_to_deck()
+                            card2:add_to_deck()
+                            card3:add_to_deck()
+                            card4:add_to_deck()
+                            card5:add_to_deck()
+                            G.consumeables:emplace(card) 
+                            G.consumeables:emplace(card2)
+                            G.consumeables:emplace(card3)
+                            G.consumeables:emplace(card4)
+                            G.consumeables:emplace(card5)
+                        return true
+                    end}))
+                end
+            end
         end
     end
   }
