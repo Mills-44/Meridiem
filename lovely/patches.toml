@@ -3,13 +3,3 @@ version = "1.0.0"
 dump_lua = true
 priority = 1
 
-# Patch obsidian to not be able to be destroyed/shattered
-[[patches]]
-[patches.pattern]
-target = '''=[SMODS _ "src/utils.lua"]'''
-pattern = '''-- TARGET: card destroyed'''
-position = "after"
-payload = '''
-if SMODS.has_enhancement(card, "m_mills_obs") then destroyed = nil end
-'''
-match_indent = true
