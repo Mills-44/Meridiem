@@ -1,24 +1,25 @@
 SMODS.Atlas {
-    key  = 'lord_of_chips',
-    path = 'lord_of_chips.png',
+    key  = 'joker_png',
+    path = 'joker_png.png',
     px   = 71, 
     py   = 95, 
   }
 
 SMODS.Joker {
-    key = 'lord_of_chips',
-    atlas = 'lord_of_chips',
+    key = 'joker_png',
+    atlas = 'joker_png',
     pos = {
         x = 0,
         y = 0
     },
     config = {
         extra = {
-            xchips = 1
+            decrease_lvl = 1,
+            hand_size = 2,
         },
     },
-    rarity = 2,
-    cost = 7,
+    rarity = 1,
+    cost = 5,
     unlocked = true,
     discovered = false, 
     blueprint_compat = true,
@@ -27,7 +28,8 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.xchips
+                card.ability.extra.hand_size,
+                card.ability.extra.decrease_lvl
             }
         }  
     end,
@@ -38,19 +40,15 @@ SMODS.Joker {
         G.C.WHITE, 
         1.0 )
     end,
+    add_to_deck = function(self, card, from_debuff)
+        G.hand:change_size(2)
+    end,
+    remove_from_deck = function(self, card, from_debuff)
+        G.hand:change_size(-2)
+    end,
     calculate = function(self, card, context)
-        local xchips = 1
-        if context.individual and context.cardarea == G.play then
-            if context.other_card:get_id() == 13 then
-                card.ability.extra.xchips = card.ability.extra.xchips + 1
-            end
-        end
-        if context.joker_main then         
-            return {
-                xmult = .5,
-                xchips = card.ability.extra.xchips
-            }
+        if context.joker_main then
+            level_up_hand(self, context.scoring_name, true, 1)
         end
     end
-    }
-
+  }

@@ -33,6 +33,13 @@ SMODS.Joker {
             }
         }  
     end,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Generic", 
+        MERIDIEM.COLOR.ARTGEN, 
+        G.C.WHITE, 
+        1.0 )
+    end,
     calculate = function(self, card, context)
         if context.joker_main then         
             return {

@@ -8,3 +8,8 @@ MERIDIEM.BASE_ENHANCEMENT = {
     "m_lucky",
     "m_stone"
 }
+
+MERIDIEM.COLOR = {
+    HACKED = HEX("67be25"),
+    ARTGEN = HEX("d6bd2b"),
+}

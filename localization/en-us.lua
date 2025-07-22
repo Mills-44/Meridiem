@@ -39,6 +39,27 @@ return {
                     "{C:dark_edition}Negative{} copy of a owned consumable"
                 }
             },
+            j_mer_corrupted_tv= {
+                name = "Corrupted TV",
+                text = {
+                    "Add a {C:green}Hacked Seal{} to",
+                    "{C:attention}3{} cards in the deck",
+                    "If 3 or more cards with a {C:green}Hacked Seal{}",
+                    "are scored {X:mult,C:white}+#1#X{} Mult and",
+                    "Create a {C:dark_edition}Negative Joker{} for {C:gold}$50",
+                    "{C:inactive}(Cant copy itself and wont trigger without $50)",
+                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                }
+            },
+            j_mer_dark_passage = {
+                name = "Dark Passage",
+                text = {
+                    "If scored hand is {C:attention}Two Pair{}",
+                    "and only contains {C:spades}Spades{} or {C:clubs}Clubs{}",
+                    "All cards gain {C:chips}+#1#{} Chips permanently",
+                    "or add 3 random {C:mer_black_edition}Darkness{} cards"
+                }
+            },
             j_mer_druid = {
                 name = "Druid",
                 text = {
@@ -56,6 +77,14 @@ return {
                 "each {C:attention}Blind{} skipped",
                 "{C:inactive}($ applied end of round){}",
                 "{C:inactive} Currently:{} {C:mult}+#3#{}{C:inactive} & {C:gold}$#4#"
+                }
+            },
+            j_mer_joker_png = {
+                name = "Joker.png",
+                text = {
+                    "{C:attention}+#1#{} Hand Size",
+                    "Decrease poker hand level by {C:attention}#2#{}",
+                    "Each scoring hand"
                 }
             },
             j_mer_lord_of_chips = {
@@ -90,6 +119,19 @@ return {
                     "Resets each hand played"
                 }
             },
+            j_mer_sanguis = {
+                name = "Sanguis",
+                text = {
+                    "Scored cards turn to {C:attention}Wild Cards",
+                    "Whenever a {C:attention} Boss Blind{} is defeated",
+                    "This {C:attention}Joker{} gains {X:mult,C:white}X#1#{}",
+                    "Whenever a {C:attention} Big Blind{} is defeated",
+                    "This {C:attention}Joker{} gains {X:mult,C:white}X#2#{}",
+                    "Whenever a {C:attention} Small Blind{} is defeated",
+                    "This {C:attention}Joker{} gains {X:mult,C:white}X#3#{}",
+                    "Currently: {X:mult,C:white}X#4#{} Mult"
+                }
+            },
             j_mer_wire_man = {
                 name = "Wire Man",
                 text = {
@@ -100,7 +142,16 @@ return {
                 }
             },
         },
-        Other={},
+        Other={
+            mer_hacked_seal = {
+                name = "Hacked Seal",
+                text = {
+                  "When held in hand ",
+                  "{C:green}1 in 2{} chance to",
+                  "Increase or Decrease by {C:attention}1{} rank"
+                }
+            },
+        },
         Planet={},
         Spectral={},
         Stake={},
@@ -117,7 +168,8 @@ return {
         dictionary={},
         high_scores={},
         labels={
-            mer_darkness = "Darkness"
+            mer_darkness = "Darkness",
+            mer_hacked_seal = "Hacked Seal",
         },
         poker_hand_descriptions={},
         poker_hands={},
@@ -130,3 +182,5 @@ return {
         v_text={},
     },
 }
+
+
