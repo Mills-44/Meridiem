@@ -17,8 +17,8 @@ SMODS.Joker {
             destroyed_cards = 3
         },
     },
-    rarity = 2,
-    cost = 6,
+    rarity = 1,
+    cost = 4,
     unlocked = true,
     discovered = false, 
     blueprint_compat = true,
