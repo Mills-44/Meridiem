@@ -22,8 +22,8 @@ MERIDIEM.file_loader(MERIDIEM.JOKERS, "content/jokers")
 -- Load Seals
 MERIDIEM.file_loader(MERIDIEM.SEALS, "content/seals")
 
--- Load Editions
-MERIDIEM.file_loader(MERIDIEM.EDITIONS, "content/editions")
+-- Load Enhancements
+MERIDIEM.file_loader(MERIDIEM.ENHANCEMENTS, "content/enhancements")
 
 -- Load Stickers
 MERIDIEM.file_loader(MERIDIEM.STICKERS, "content/stickers")

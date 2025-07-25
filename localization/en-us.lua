@@ -2,15 +2,21 @@ return {
     descriptions = {
         Back={},
         Blind={},
-        Edition={
-            e_mer_darkness = {
-                name = "Darkness",
+        Edition={},
+        Enhanced={
+            m_mer_darkness = {
+                name = "Darknkess Card",
                 text = {
                     ""
                 }
-      }
-    },
-        Enhanced={},
+            },
+            m_mer_lightness = {
+                name = "Lightness Card",
+                text = {
+                    "Always scores when played"
+                }
+            },
+        },
         Joker={
             j_mer_a_fools_camera = {
                 name = "A Fool's Camera",
@@ -169,6 +175,7 @@ return {
         high_scores={},
         labels={
             mer_darkness = "Darkness",
+            mer_lightness = "Lightness",
             mer_hacked_seal = "Hacked Seal",
         },
         poker_hand_descriptions={},
